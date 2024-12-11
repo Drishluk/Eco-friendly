@@ -65,7 +65,7 @@ const LoginForm = ({ onOpenRegister, onOpenForgotPassword, onClose, onOperationC
                                 <div className="modal-form__input-content">
                                     {/* Почта */}
                                     <div className="modal-form__input-group">
-                                        <div className="modal-form__input-header-text">Почта</div>
+                                        <div className="modal-form__input-header-text">Ваш email</div>
                                         
                                             <textarea
                                                 
@@ -73,21 +73,21 @@ const LoginForm = ({ onOpenRegister, onOpenForgotPassword, onClose, onOperationC
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 className="modal-form__input"
-                                                placeholder="Введіть вашу пошту"
+                                                placeholder="Введіть Ваш email"
                                             ></textarea>
                                         
                                     </div>
 
                                     {/* Пароль */}
                                     <div className="modal-form__input-group">
-                                        <div className="modal-form__input-header-text">Пароль</div>
+                                        <div className="modal-form__input-header-text">Ваш пароль</div>
                                         <div className="modal-form__input-field">
                                             <textarea
                                                 name="password"
                                                 value={formData.password}
                                                 onChange={handleChange}
                                                 className="modal-form__input"
-                                                placeholder="Введіть ваш пароль"
+                                                placeholder="Введіть Ваш пароль"
                                                 style={{
                                                     WebkitTextSecurity: passwordVisible ? 'none' : 'disc', // Для отображения / скрытия пароля
                                                 }}
