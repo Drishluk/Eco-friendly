@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const ApiConfig = axios.create({
-    baseURL: 'http://eco-friendly-server-production.up.railway.app',
+    baseURL: 'https://eco-friendly-server-production.up.railway.app',
     withCredentials: true, // Включаем куки
 });
 
@@ -21,7 +21,7 @@ ApiConfig.interceptors.response.use(
 
             try {
                 const refreshResponse = await axios.post(
-                    'http://eco-friendly-server-production.up.railway.app/api/auth/refresh',
+                    'https://eco-friendly-server-production.up.railway.app/api/auth/refresh',
                     {},
                     { withCredentials: true }
                 );
