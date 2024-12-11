@@ -7,7 +7,7 @@ const RegistrationForm = ({ onClose, onOperationComplete }) => {
         firstName: '',
         lastName: '',
         email: '',
-        phoneNumber: '',
+        phoneNumber: '', // Используем корректное имя свойства
         password: '',
         confirmPassword: '',
         consentData: false,
@@ -81,49 +81,49 @@ const RegistrationForm = ({ onClose, onOperationComplete }) => {
                             <div className="modal-form__input-content">
                                 {/* Имя пользователя */}
                                 <div className="modal-form__input-group">
-                                    <div className="modal-form__input-header-text">Имя користувача</div>
+                                    <div className="modal-form__input-header-text">Ваше ім'я</div>
                                     <textarea
                                         name="firstName"
                                         value={formData.firstName}
                                         onChange={handleChange}
                                         className="modal-form__input"
-                                        placeholder="Введіть ваше ім'я"
+                                        placeholder="Введіть Ваше ім'я"
                                     />
                                 </div>
 
                                 {/* Фамилия пользователя */}
                                 <div className="modal-form__input-group">
-                                    <div className="modal-form__input-header-text">Прізвище</div>
+                                    <div className="modal-form__input-header-text">Ваше прізвище</div>
                                     <textarea
                                         name="lastName"
                                         value={formData.lastName}
                                         onChange={handleChange}
                                         className="modal-form__input"
-                                        placeholder="Введіть ваше прізвище"
+                                        placeholder="Введіть Ваше прізвище"
                                     />
                                 </div>
 
                                 {/* Почта */}
                                 <div className="modal-form__input-group">
-                                    <div className="modal-form__input-header-text">Почта</div>
+                                    <div className="modal-form__input-header-text">Ваш email</div>
                                     <textarea
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
                                         className="modal-form__input"
-                                        placeholder="Введіть вашу пошту"
+                                        placeholder="Введіть Ваш email"
                                     />
                                 </div>
 
                                 {/* Номер телефона */}
                                 <div className="modal-form__input-group">
-                                    <div className="modal-form__input-header-text">Номер телефону</div>
+                                    <div className="modal-form__input-header-text">Ваш номер телефону</div>
                                     <textarea
-                                        name="phone"
+                                        name="phoneNumber" // Используем корректное имя свойства
                                         value={formData.phoneNumber}
                                         onChange={handleChange}
                                         className="modal-form__input"
-                                        placeholder="Введіть ваш номер телефону"
+                                        placeholder="Введіть Ваш номер телефону"
                                     />
                                 </div>
 
@@ -135,7 +135,7 @@ const RegistrationForm = ({ onClose, onOperationComplete }) => {
                                         value={formData.password}
                                         onChange={handleChange}
                                         className="modal-form__input"
-                                        placeholder="Введіть ваш пароль"
+                                        placeholder="Введіть Ваш пароль"
                                     />
                                 </div>
 
@@ -147,7 +147,7 @@ const RegistrationForm = ({ onClose, onOperationComplete }) => {
                                         value={formData.confirmPassword}
                                         onChange={handleChange}
                                         className="modal-form__input"
-                                        placeholder="Підтвердіть ваш пароль"
+                                        placeholder="Підтвердіть Ваш пароль"
                                     />
                                 </div>
 

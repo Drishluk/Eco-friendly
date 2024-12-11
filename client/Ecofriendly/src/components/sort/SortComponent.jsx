@@ -43,7 +43,7 @@ const SortComponent = ({ products, onSorted }) => {
               setIsOpen(false);
             }}
           >
-            <p className="sort__text">Цiною (по возрастанию)</p>
+            <p className="sort__text">Цiною (за зростанням)</p>
           </div>
           <div
             className="sort__option"
@@ -52,7 +52,7 @@ const SortComponent = ({ products, onSorted }) => {
               setIsOpen(false);
             }}
           >
-            <p className="sort__text">Цiною (по убыванию)</p>
+            <p className="sort__text">Цiною (за спаданням)</p>
           </div>
           <div
             className="sort__option"
