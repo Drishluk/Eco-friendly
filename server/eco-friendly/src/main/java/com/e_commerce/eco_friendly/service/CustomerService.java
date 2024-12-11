@@ -88,20 +88,20 @@ public class CustomerService implements UserDetailsService {
         if (!isPassValid(request.getPassword())) {
             return ResponseEntity
                     .badRequest()
-                    .body("Пароль должен содержать не менее 8 символов, включать цифры и заглавные буквы.");
+                    .body("Пароль повинен мати мінімум 8 символів, 1 цифру та заглавну букву.");
         }
 
         if (!request.getPassword().equals(request.getConfirmPassword())) {
             return ResponseEntity
                     .badRequest()
-                    .body("Пароли не совпадают.");
+                    .body("Паролі не співпадають.");
         }
 
         // Проверка уникальности пользователя
         if (customerRepository.findByEmail(request.getEmail()).isPresent()) {
             return ResponseEntity
                     .badRequest()
-                    .body("Пользователь с таким именем уже существует.");
+                    .body("Такий користувач вже є.");
         }
 
         Customer customer = new Customer();
@@ -119,7 +119,7 @@ public class CustomerService implements UserDetailsService {
 
         return ResponseEntity
                 .status(201)
-                .body("Пользователь успешно зарегистрирован!");
+                .body("Користувач успішно зареєстрований!");
     }
     public ResponseEntity<String> addToWishlist(Integer customerId, Integer productId) {
         Customer customer = customerRepository.findById(customerId).orElse(null);

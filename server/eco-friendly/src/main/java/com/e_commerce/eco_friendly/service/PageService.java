@@ -69,7 +69,7 @@ public class PageService {
 
         productDetailsPageDTO.setProductGroup(ProductService.toProductGroupDTO(productRepository
                         .findSimilarProductsById(productId, PageRequest.of(0, 4)),
-                "Схожі ігри", null));
+                "Схожі товари", null));
 
         return productDetailsPageDTO;
     }
